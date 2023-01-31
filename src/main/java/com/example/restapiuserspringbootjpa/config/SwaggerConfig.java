@@ -13,8 +13,8 @@ import springfox.documentation.spring.web.plugins.Docket;
 import java.util.Collections;
 
 /**
- * Swagger configuration for REST API documentation
- * HTML = http://localhost:8080/swagger-ui/index.html
+ * Swagger configuration for REST API documentation <p>
+ * HTML = http://localhost:8080/swagger-ui/index.html <p>
  * JSON = http://localhost:8080/v2/api-docs
  */
 @Configuration

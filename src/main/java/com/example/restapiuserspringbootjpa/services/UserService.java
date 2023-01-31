@@ -17,12 +17,12 @@ public class UserService {
         this.userRepository = userRepository;
 
         // Inserting data for test endpoints
-        this.userRepository.save(new User("Alex", "Nole", "cnole_azabache@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Nole", "cnole_azabache@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Nole", "cnole_azabache@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Nole", "cnole_azabache@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Nole", "cnole_azabache@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Nole", "cnole_azabache@outlook.com", 20));
+        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
+        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
+        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
+        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
+        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
+        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
     }
 
     // Methods

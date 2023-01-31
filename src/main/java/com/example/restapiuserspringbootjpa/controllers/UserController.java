@@ -27,8 +27,8 @@ public class UserController {
     }
 
     /**
-     * Gets all the users in the database
-     * http://localhost:8080/api/users
+     * Gets all the users in the database <p>
+     * http://localhost:8080/api/users <p>
      * Response
      *
      * @return
@@ -41,9 +41,9 @@ public class UserController {
     }
 
     /**
-     * Get user by id from database
-     * http://localhost:8080/api/users/{id}
-     * Request
+     * Get user by id from database <p>
+     * http://localhost:8080/api/users/{id} <p>
+     * Request <p>
      * Response
      *
      * @param id
@@ -63,9 +63,9 @@ public class UserController {
     }
 
     /**
-     * Create a new user in the database
-     * http://localhost:8080/api/users
-     * Request
+     * Create a new user in the database <p>
+     * http://localhost:8080/api/users <p>
+     * Request <p>
      * Response
      *
      * @param user
@@ -84,9 +84,9 @@ public class UserController {
     }
 
     /**
-     * Update user by id in the database
-     * http://localhost:8080/api/users/{id}
-     * Request
+     * Update user by id in the database <p>
+     * http://localhost:8080/api/users/{id} <p>
+     * Request <p>
      * Response
      *
      * @param id
@@ -110,9 +110,9 @@ public class UserController {
     }
 
     /**
-     * Delete user by id in the database
-     * http://localhost/api/users/{id}
-     * Request
+     * Delete user by id in the database <p>
+     * http://localhost/api/users/{id} <p>
+     * Request <p>
      * Response
      *
      * @param id
@@ -131,8 +131,8 @@ public class UserController {
     }
 
     /**
-     * Delete all users from database
-     * http://localhost/api/users
+     * Delete all users from database <p>
+     * http://localhost/api/users <p>
      * Response
      *
      * @return
