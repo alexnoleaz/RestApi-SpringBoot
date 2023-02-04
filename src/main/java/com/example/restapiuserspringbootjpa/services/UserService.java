@@ -18,11 +18,7 @@ public class UserService {
 
         // Inserting data for test endpoints
         this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
-        this.userRepository.save(new User("Alex", "Sandoval", "alex-sandoval12@outlook.com", 20));
+        this.userRepository.save(new User("Jeyson", "Sanchez", "sanchez@outlook.com", 20));
     }
 
     // Methods
@@ -38,14 +34,19 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public boolean updateUser(User user) {
-        boolean exists = userRepository.existsById(user.getId());
+    public User updateUser(User user) {
+        Optional<User> res = userRepository.findById(user.getId());
+        User userUpdate = new User();
 
-        if (exists) {
-            userRepository.save(user);
-            return true;
+        if (res.isPresent()) {
+            userUpdate.setId(user.getId());
+            userUpdate.setName(user.getName() != null ? user.getName() : res.get().getName());
+            userUpdate.setLastname(user.getLastname() != null ? user.getLastname() : res.get().getLastname());
+            userUpdate.setEmail(user.getEmail() != null ? user.getEmail() : res.get().getEmail());
+            userUpdate.setAge(user.getAge() != null ? user.getAge() : res.get().getAge());
+            return userRepository.save(userUpdate);
         }
-        return false;
+        return null;
     }
 
     public boolean deleteUser(Long id) {

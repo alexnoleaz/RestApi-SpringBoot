@@ -96,17 +96,15 @@ public class UserController {
     @PutMapping("/users/{id}")
     @ApiOperation("Update user by id in the database")
     public ResponseEntity<User> updateUser(@ApiParam("Primary key of type long") @PathVariable Long id, @RequestBody User user) {
-        boolean isSuccessful = false;
-
         user.setId(id);
-        isSuccessful = userService.updateUser(user);
+        var userSuccessful = userService.updateUser(user);
 
-        if (!isSuccessful) {
+        if (userSuccessful == null) {
             logger.warn("Trying to update a non existent user");
             return ResponseEntity.notFound().build();
         }
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(user);
+        return ResponseEntity.status(HttpStatus.CREATED).body(userSuccessful);
     }
 
     /**
